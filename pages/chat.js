@@ -29,7 +29,7 @@ export default function Chat() {
 
   return (
     <div
-      className="h-screen"
+      className="h-screen flex flex-col"
       style={{
         backgroundColor: '#36206e', // Fundo roxo escuro suave
         color: '#f0eaff', // Texto claro com tom lilás
@@ -44,7 +44,12 @@ export default function Chat() {
       >
         <h1 className="text-3xl font-bold">Jornada Celeste</h1>
       </div>
-      <ul className="p-4 overflow-y-auto">
+      <ul
+        className="flex-1 p-4 overflow-y-auto"
+        style={{
+          backgroundColor: '#36206e', // Fundo roxo escuro para o chat
+        }}
+      >
         {rolls.map((roll, index) => {
           const groupedResults = formatResults(roll.results);
           return (
